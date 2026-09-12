@@ -4,12 +4,12 @@
 
 ## PORTADA
 
-* **Institución:** [Nombre de la Universidad / Institución Educativa]
-* **Facultad:** Ingeniería / Ciencias de la Computación
-* **Asignatura:** Seguridad Informática y Criptografía
-* **Título del Proyecto:** Desarrollo de Software Web de Cifrado y Criptoanálisis Clásico (César y Atbash) con Detección Automatizada mediante Frecuencias de Al-Kindi
-* **Estudiante:** [Nombre del Alumno / Alumna]
-* **Docente:** [Nombre del Profesor / Profesora]
+* **Institución:** Universidad Autónoma de Aguascalientes (UAA)
+* **Carrera:** Ingeniería en Sistemas Computacionales
+* **Asignatura:** Seguridad en Sistemas de Cómputo I (637925 - 7° A)
+* **Título del Proyecto:** Primeros pasos cifrando
+* **Estudiante:** Rogelio Gutiérrez
+* **Docente:** Mtro. Arturo Ocampo Silva
 * **Fecha de Entrega:** Septiembre de 2026
 
 ---

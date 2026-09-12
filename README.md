@@ -1,5 +1,7 @@
 # Sistema de Cifrado y Descifrado (César / Atbash) con Criptoanálisis de Al-Kindi
 
+**Proyecto:** Primeros pasos cifrando | **Asignatura:** Seguridad en Sistemas de Cómputo I (UAA) | **Autor:** Rogelio Gutiérrez
+
 Aplicación web desarrollada para el cifrado y descifrado clásico utilizando los métodos **César** (rotación modular) y **Atbash** (reflexión de alfabeto), con un motor de criptoanálisis autónomo inspirado en las técnicas de **أبو يوسف يعقوب بن إسحاق الكندي (Al-Kindi)**.
 
 El sistema identifica automáticamente el método y el módulo utilizado mediante análisis de frecuencias ($\chi^2$), mostrando únicamente la línea descifrada correcta sin requerir intervención humana.
