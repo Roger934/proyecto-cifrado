@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cifrado y Descifrado César / Atbash</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <header>
+    <h1>Cifrado y Descifrado César / Atbash</h1>
+    <p class="subtitulo">Criptoanálisis automatizado con análisis de frecuencia</p>
+  </header>
+
+  <!-- SECCIÓN 1: CONJUNTO DE CARACTERES -->
+  <section class="card" id="seccion-conjunto">
+    <div class="card-header">
+      <span class="paso-num">1</span>
+      <h2 class="card-title">Alfabeto y módulo</h2>
+    </div>
+
+    <div class="form-group">
+      <label for="rangoSelect">Conjunto de caracteres base:</label>
+      <select id="rangoSelect">
+        <option value="32-126">ASCII imprimible (32-126) - Módulo 95</option>
+        <option value="65-90">Mayúsculas A-Z (65-90) - Módulo 26</option>
+        <option value="97-122">Minúsculas a-z (97-122) - Módulo 26</option>
+        <option value="es-mayus">Español mayúsculas con Ñ - Módulo 27</option>
+        <option value="es-minus">Español minúsculas con ñ - Módulo 27</option>
+        <option value="48-57">Dígitos 0-9 (48-57) - Módulo 10</option>
+        <option value="rango-ascii">Rango numérico ASCII personalizado</option>
+        <option value="libre">Entrada libre de caracteres o símbolos</option>
+      </select>
+    </div>
+
+    <div class="form-group" id="grupoRangoNumerico" style="display: none;">
+      <label for="rangoInput">Rango ASCII (inicio-fin, de 0 a 255):</label>
+      <input type="text" id="rangoInput" placeholder="Ejemplo: 32-126">
+    </div>
+
+    <div class="form-group" id="grupoEntradaLibre" style="display: none;">
+      <label for="caracteresLibresInput">Caracteres o símbolos a incluir:</label>
+      <input type="text" id="caracteresLibresInput" placeholder="Ejemplo: ABCDEFGHIJKLMNÑOPQRSTUVWXYZ">
+    </div>
+
+    <div class="btn-group">
+      <button id="btnConstruir" class="btn-primary">Establecer conjunto</button>
+    </div>
+
+    <div id="resultadoConjunto" class="resultado-box"></div>
+  </section>
+
+  <!-- SECCIÓN 2: CIFRADO -->
+  <section class="card" id="seccion-cifrar">
+    <div class="card-header">
+      <span class="paso-num">2</span>
+      <h2 class="card-title">Cifrar mensaje</h2>
+    </div>
+
+    <div class="grid-2">
+      <div class="form-group">
+        <label for="metodoCifrado">Método:</label>
+        <select id="metodoCifrado">
+          <option value="cesar">César (desplazamiento modular)</option>
+          <option value="atbash">Atbash (inversión de alfabeto)</option>
+        </select>
+      </div>
+
+      <div class="form-group" id="grupoDesplazamiento">
+        <label for="desplazamientoInput">Desplazamiento (k):</label>
+        <input type="number" id="desplazamientoInput" value="3" min="1">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="textoCifrarInput">Texto original:</label>
+      <textarea id="textoCifrarInput" rows="2" placeholder="Escriba el mensaje a cifrar..."></textarea>
+    </div>
+
+    <div class="btn-group">
+      <button id="btnCifrar" class="btn-primary">Cifrar</button>
+    </div>
+
+    <div id="resultadoCifrado" class="resultado-box"></div>
+  </section>
+
+  <!-- SECCIÓN 3: DESCIFRADO AUTOMÁTICO -->
+  <section class="card" id="seccion-descifrar">
+    <div class="card-header">
+      <span class="paso-num">3</span>
+      <h2 class="card-title">Descifrar mensaje</h2>
+    </div>
+
+    <div class="form-group">
+      <label for="textoDescifrarInput">Texto cifrado:</label>
+      <textarea id="textoDescifrarInput" rows="2" placeholder="Pegue el texto cifrado..."></textarea>
+      <p class="form-hint">Determinación automática del tipo de cifrado y módulo sin intervención humana.</p>
+    </div>
+
+    <div class="btn-group">
+      <button id="btnDescifrar" class="btn-primary">Descifrar automáticamente</button>
+    </div>
+
+    <div id="resultadoDescifrado" class="resultado-box"></div>
+  </section>
+
+  <footer>
+    <p>Criptoanálisis clásico basado en el método de frecuencias de Al-Kindi (أبو يوسف يعقوب بن إسحاق الكندي)</p>
+  </footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
